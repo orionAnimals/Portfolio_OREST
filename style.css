@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@1,600&family=Kalam:wght@700&family=Laila&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+	/*font-family: 'Josefin Slab', serif;
+	font-family: 'Kalam', cursive;
+	font-family: 'Laila', sans-serif;
+	font-family: 'Pacifico', cursive;
+	*/
+
+*, *:before, *:after {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+	/*Green bg like the best bg*/
+	/*background: linear-gradient(to bottom, #333333 0%, #006666 100%);*/
+	/*Yellow bg like the second bg*/
+	/*background: linear-gradient(to bottom, #333333 0%, #ffcc66 100%);*/
+	/*Bg orange*/
+	/*	background: linear-gradient(to bottom, #111111 0%, #ff6600 100%);*/
+/*	background: linear-gradient(to bottom, #000000 0%, #cc0066 100%);*/
+	/*bg light*/
+	/*background: linear-gradient(to bottom, #00cc99 0%, #003300 100%);*/
+	/*background: linear-gradient(to bottom, #ccffff 0%, #5f5f5f 100%);*/
+	background-color: #000;
+	background-attachment: fixed;
+    color: #fff;
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    min-width: 320px;
+    max-width: auto;
+    font-size: 10px;
+    font-family: sans-serif;
+}
+
+/*---------------srollbar-----------------*/
+
+/* width */
+body::-webkit-scrollbar {
+    width: 0.4em;
+}
+    /* Track */
+body::-webkit-scrollbar-track {
+    background: #000; 
+}
+    /* Handle */
+body::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 15px;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+ul {
+	padding: 0px;
+}
+img {
+	user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.header_wrapp {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: auto;
+	padding-top: 1em;
+	z-index: 100;
+	position: fixed;
+}
+.header_fixed {
+	width: 400px;
+	height: 60px;
+	min-height: 45px;
+	background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 15px 10px;
+	border-radius: 10px;
+	align-items: flex-start;
+	text-align: center;
+	font-family: 'Kalam', cursive;
+	position: fixed;
+	z-index: 10000;
+	transition: .6s;
+}
+.header_fixed.active {
+	height: 500px;
+}
+.logo_header {
+	width: auto;
+	height: auto;
+	display: inline-flex;
+	font-size: 2em;
+	text-transform: capitalize;
+	letter-spacing: 5px;
+}
+.menu_hamburger_header {
+	border: none;
+	border-radius: 0px;
+	background-color: transparent;
+	color: #fff;
+	font-size: 2em;
+	padding: 0px;
+	margin: 0px;
+	cursor: pointer;
+}
+/*			MAIN		*/
+main {
+	z-index: 1;
+}
+.face_block_main {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	background-color: #fff;
+	background-image: url(i.jpg);
+	background-size: cover;
+	z-index: 1;
+}
+/*			Porfolio photos			*/
+.Portfolio_wrapp {
+	background-color: #ccc;
+	display: grid;
+	flex-direction: row;
+	align-self: center;
+	justify-content: center;	
+	grid-template-columns: 16% 16% 16% 16% 16% 16%;
+	grid-template-rows: 5; 
+	grid-auto-rows: max-content;
+	column-gap: 2.5px;
+	row-gap: 5px;
+	width: auto;
+	height: auto;
+	margin: 0px;
+	padding-top: 15px;
+}
+.wrapp_vertical_column_portfolio {
+	display: grid;
+	flex-direction: column;
+	width: auto;
+	height: auto;
+	margin: 0px;
+}
+.photo_wrapp_portfolio {
+	width: 100%;
+	height: auto;
+	border-radius: 15px;
+	overflow: hidden;
+	margin-top: .5%;
+}
+.img_port {
+	width: 100%;
+	height: 100%;
+}
+/*.navigation_header {
+	width: 600px;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	font-size: 1em;
+	font-family: sans-serif;
+	letter-spacing: 2px;
+}
+.navigation_header li {
+	display: inline-flex;
+	margin-left: 10px;
+}
+.logo_flex_vertical_header {
+	display: flex;
+	flex-direction: row;
+	width: auto;
+	height: auto;
+}
+.navigation_header i {
+	font-size: 1.8em;
+}
+.navigation_header .link_nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}*/
+
+
+
+
+
+
+@media only screen and (max-width:1050px){
+	.Portfolio_wrapp {	
+		grid-template-columns: 49.5% 45.5%;
+	}
+	.wrapp_vertical_column_portfolio{
+		margin-top: 0px;
+	}
+}
