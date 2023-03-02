@@ -193,7 +193,11 @@ main {
 
 
 
-
+@media only screen and (max-width:500px) {
+	.header_fixed {
+		width: 200px;
+	}
+}
 
 
 @media only screen and (max-width:1050px){
