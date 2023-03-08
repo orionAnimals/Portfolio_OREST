@@ -95,6 +95,9 @@ img {
 	transition: .6s;
 }
 .header_fixed.active {
+	background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
 	height: 500px;
 }
 .logo_header {
@@ -130,38 +133,41 @@ main {
 }
 /*			Porfolio photos			*/
 .Portfolio_wrapp {
-	background-color: #ccc;
+	background-color: #000;
 	display: grid;
+	grid-template-columns: auto auto auto auto auto auto;
 	flex-direction: row;
 	align-self: center;
-	justify-content: center;	
-	grid-template-columns: 16% 16% 16% 16% 16% 16%;
-	grid-template-rows: 5; 
-	grid-auto-rows: max-content;
-	column-gap: 2.5px;
-	row-gap: 5px;
+	justify-content: center;
+	gap: 5px;
 	width: auto;
 	height: auto;
 	margin: 0px;
-	padding-top: 15px;
+	padding-top: auto;
 }
 .wrapp_vertical_column_portfolio {
 	display: grid;
+	max-width: 100%;
 	flex-direction: column;
+	justify-content: initial;
 	width: auto;
 	height: auto;
+	padding: 0px;
 	margin: 0px;
 }
 .photo_wrapp_portfolio {
-	width: 100%;
+	display: block;
+	width: auto;
 	height: auto;
-	border-radius: 15px;
+	border-radius: 20px;
 	overflow: hidden;
-	margin-top: .5%;
+	margin-top: 5px;
 }
 .img_port {
 	width: 100%;
 	height: 100%;
+	aspect-ratio: auto;
+	object-fit: cover;
 }
 /*.navigation_header {
 	width: 600px;
@@ -193,18 +199,20 @@ main {
 
 
 
-@media only screen and (max-width:500px) {
-	.header_fixed {
-		width: 200px;
+
+@media only screen and (max-width:1150px){
+	.Portfolio_wrapp {
+		grid-template-columns: auto auto auto;
+	}
+	.wrapp_vertical_column_portfolio {
+		margin-top: -5px;
 	}
 }
-
-
-@media only screen and (max-width:1050px){
-	.Portfolio_wrapp {	
-		grid-template-columns: 49.5% 45.5%;
+@media only screen and (max-width:900px) {
+	.header_fixed {
+		width: 95%;
 	}
-	.wrapp_vertical_column_portfolio{
-		margin-top: 0px;
+	.Portfolio_wrapp {
+		grid-template-columns: auto auto;
 	}
 }
